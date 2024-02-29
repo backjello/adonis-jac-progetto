@@ -3,7 +3,7 @@ build
 coverage
 .vscode
 .DS_STORE
-.env
+# .env rimosso solo a spopo didattico
 tmp
 npm-debug.log*
 yarn-debug.log*
