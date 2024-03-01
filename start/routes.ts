@@ -27,6 +27,9 @@ Route.group(() => {
 
   Route.resource('periodicals', 'PeriodicalsController')
 
+  Route.get('search/:text', 'ArticlesController.search')
+
+
 }).middleware(['auth'])
 
 Route.post('login', 'AuthController.login')
