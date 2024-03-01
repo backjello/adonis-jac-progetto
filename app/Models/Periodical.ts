@@ -15,7 +15,10 @@ export default class Periodical extends BaseModel {
 
   // prima modello e poi tabella pivot
   @hasManyThrough([() => Category, () => PeriodicalCategory], {
-
+    localKey: 'id', // tabella periodicals
+    foreignKey: 'periodicalId', // tabella PeriodicalCategory (id periodico)
+    throughLocalKey: 'categoryId', // tabella PeriodicalCategory (id category)
+    throughForeignKey: 'id', // tabella categories
   })
   public categories: HasManyThrough<typeof Category>
 
