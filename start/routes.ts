@@ -29,6 +29,9 @@ Route.group(() => {
 
   Route.get('search/:text', 'ArticlesController.search')
 
+  Route.resource('subscriptions', 'SubscriptionsController')
+
+  Route.resource('categories', 'CategoriesController')
 
 }).middleware(['auth'])
 
